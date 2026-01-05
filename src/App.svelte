@@ -151,7 +151,7 @@
               <td class="item-cell">
                 <div class="item-content">
                   <span class="item-quantity">{quantity}</span>
-                  <img src="/resources/images/{getItemImage(itemName)}" alt={itemName} class="item-icon" />
+                  <img src="./resources/images/{getItemImage(itemName)}" alt={itemName} class="item-icon" />
                   <span class="item-name">{formatItemName(itemName)}</span>
                 </div>
               </td>
@@ -186,7 +186,7 @@
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #0a1929 url('/resources/webpageBgImg.jpg') no-repeat center center fixed;
+    background: #0a1929 url('./resources/webpageBgImg.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #b0bec5;
     min-height: 100vh;
