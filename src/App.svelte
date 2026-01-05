@@ -89,14 +89,7 @@
   }
 </script>
 
-<svelte:head>
-  <style>
-    :root {
-      --bg-image: url({bgImage});
-    }
-  </style>
-</svelte:head>
-
+<div class="app-wrapper" style="--bg-image: url({bgImage})">
 <main>
   <h1>S2 Forge Recipes</h1>
 
@@ -189,19 +182,24 @@
     </table>
   </div>
 </main>
+</div>
 
 <style>
   :global(body) {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: #0a1929 var(--bg-image) no-repeat center center fixed;
-    background-size: cover;
     color: #b0bec5;
-    min-height: 100vh;
   }
 
-  :global(body::before) {
+  .app-wrapper {
+    background: #0a1929 var(--bg-image) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .app-wrapper::before {
     content: '';
     position: fixed;
     top: 0;
